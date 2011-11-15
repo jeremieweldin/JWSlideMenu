@@ -95,6 +95,8 @@
         // Do something here......................
     }
     
+    //TODO: either support tabbaritem or a protocol in order to handle images in the menu.
+    
     UIViewController *controller = (UIViewController *)[self.childViewControllers objectAtIndex:indexPath.row];
     cell.textLabel.text = controller.title;
     
