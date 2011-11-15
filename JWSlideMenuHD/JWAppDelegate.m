@@ -1,8 +1,8 @@
 //
 //  JWAppDelegate.m
-//  JWSlideMenu
+//  JWSlideMenuHD
 //
-//  Created by Jeremie Weldin on 11/14/11.
+//  Created by Jeremie Weldin on 11/15/11.
 //  Copyright (c) 2011 Jeremie Weldin. All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 #import "SecondViewController.h"
 
 @implementation JWAppDelegate
+
 
 @synthesize window = _window;
 
@@ -27,23 +28,24 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
-    f.title = @"First";
-    UIViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
-    s.title = @"Second";
+//    UIViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
+//    f.title = @"First";
+//    UIViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
+//    s.title = @"Second";
     
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
     
-    [slideMenu addViewController:f];
-    [slideMenu addViewController:s];
+//    [slideMenu addViewController:f];
+//    [slideMenu addViewController:s];
     
     self.window.rootViewController = slideMenu;
     
-    [f release];
-    [s release];
+//    [f release];
+//    [s release];
     
     [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

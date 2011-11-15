@@ -14,13 +14,21 @@
 		13EBC5F51472139A000B74D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC5F41472139A000B74D1 /* main.m */; };
 		13EBC5F91472139A000B74D1 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC5F81472139A000B74D1 /* JWAppDelegate.m */; };
 		13EBC60614721446000B74D1 /* JWSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC60414721446000B74D1 /* JWSlideMenuController.m */; };
-		13EBC60714721446000B74D1 /* JWSlideMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60514721446000B74D1 /* JWSlideMenu.xib */; };
 		13EBC60B147229C7000B74D1 /* menu_icon_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60A147229C7000B74D1 /* menu_icon_32x32.png */; };
 		13EBC60D14722A37000B74D1 /* menu_icon_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */; };
 		13EBC61C14724C32000B74D1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC61A14724C31000B74D1 /* FirstViewController.m */; };
 		13EBC61D14724C32000B74D1 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC61B14724C32000B74D1 /* FirstViewController.xib */; };
 		13EBC62114724C46000B74D1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC61F14724C46000B74D1 /* SecondViewController.m */; };
 		13EBC62214724C46000B74D1 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC62014724C46000B74D1 /* SecondViewController.xib */; };
+		13EBC6261472F6DF000B74D1 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC6251472F6DF000B74D1 /* ThirdViewController.m */; };
+		13EBC62D14730133000B74D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5E81472139A000B74D1 /* UIKit.framework */; };
+		13EBC62E14730133000B74D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EA1472139A000B74D1 /* Foundation.framework */; };
+		13EBC62F14730133000B74D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EC1472139A000B74D1 /* CoreGraphics.framework */; };
+		13EBC63514730134000B74D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC63314730134000B74D1 /* InfoPlist.strings */; };
+		13EBC63714730134000B74D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC63614730134000B74D1 /* main.m */; };
+		13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC63A14730134000B74D1 /* JWAppDelegate.m */; };
+		13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC60414721446000B74D1 /* JWSlideMenuController.m */; };
+		13EBC64014730225000B74D1 /* menu_icon_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +44,6 @@
 		13EBC5F81472139A000B74D1 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
 		13EBC60314721446000B74D1 /* JWSlideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSlideMenuController.h; sourceTree = "<group>"; };
 		13EBC60414721446000B74D1 /* JWSlideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSlideMenuController.m; sourceTree = "<group>"; };
-		13EBC60514721446000B74D1 /* JWSlideMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWSlideMenu.xib; sourceTree = "<group>"; };
 		13EBC60A147229C7000B74D1 /* menu_icon_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_32x32.png; sourceTree = "<group>"; };
 		13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_20x20.png; sourceTree = "<group>"; };
 		13EBC61914724C31000B74D1 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -45,6 +52,15 @@
 		13EBC61E14724C46000B74D1 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		13EBC61F14724C46000B74D1 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		13EBC62014724C46000B74D1 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		13EBC6241472F6DF000B74D1 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		13EBC6251472F6DF000B74D1 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		13EBC62B14730133000B74D1 /* JWSlideMenuHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSlideMenuHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EBC63214730134000B74D1 /* JWSlideMenuHD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JWSlideMenuHD-Info.plist"; sourceTree = "<group>"; };
+		13EBC63414730134000B74D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		13EBC63614730134000B74D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		13EBC63814730134000B74D1 /* JWSlideMenuHD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWSlideMenuHD-Prefix.pch"; sourceTree = "<group>"; };
+		13EBC63914730134000B74D1 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
+		13EBC63A14730134000B74D1 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13EBC62814730133000B74D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC62D14730133000B74D1 /* UIKit.framework in Frameworks */,
+				13EBC62E14730133000B74D1 /* Foundation.framework in Frameworks */,
+				13EBC62F14730133000B74D1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +92,7 @@
 			children = (
 				13EBC609147229A9000B74D1 /* Images */,
 				13EBC5EE1472139A000B74D1 /* JWSlideMenu */,
+				13EBC63014730134000B74D1 /* JWSlideMenuHD */,
 				13EBC5E71472139A000B74D1 /* Frameworks */,
 				13EBC5E51472139A000B74D1 /* Products */,
 			);
@@ -75,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				13EBC5E41472139A000B74D1 /* JWSlideMenu.app */,
+				13EBC62B14730133000B74D1 /* JWSlideMenuHD.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +124,6 @@
 				13EBC5EF1472139A000B74D1 /* Supporting Files */,
 				13EBC60314721446000B74D1 /* JWSlideMenuController.h */,
 				13EBC60414721446000B74D1 /* JWSlideMenuController.m */,
-				13EBC60514721446000B74D1 /* JWSlideMenu.xib */,
 			);
 			path = JWSlideMenu;
 			sourceTree = "<group>";
@@ -130,10 +157,33 @@
 				13EBC61E14724C46000B74D1 /* SecondViewController.h */,
 				13EBC61F14724C46000B74D1 /* SecondViewController.m */,
 				13EBC62014724C46000B74D1 /* SecondViewController.xib */,
+				13EBC6241472F6DF000B74D1 /* ThirdViewController.h */,
+				13EBC6251472F6DF000B74D1 /* ThirdViewController.m */,
 				13EBC5F71472139A000B74D1 /* JWAppDelegate.h */,
 				13EBC5F81472139A000B74D1 /* JWAppDelegate.m */,
 			);
 			name = "Non-Specific";
+			sourceTree = "<group>";
+		};
+		13EBC63014730134000B74D1 /* JWSlideMenuHD */ = {
+			isa = PBXGroup;
+			children = (
+				13EBC63914730134000B74D1 /* JWAppDelegate.h */,
+				13EBC63A14730134000B74D1 /* JWAppDelegate.m */,
+				13EBC63114730134000B74D1 /* Supporting Files */,
+			);
+			path = JWSlideMenuHD;
+			sourceTree = "<group>";
+		};
+		13EBC63114730134000B74D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13EBC63214730134000B74D1 /* JWSlideMenuHD-Info.plist */,
+				13EBC63314730134000B74D1 /* InfoPlist.strings */,
+				13EBC63614730134000B74D1 /* main.m */,
+				13EBC63814730134000B74D1 /* JWSlideMenuHD-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +204,23 @@
 			name = JWSlideMenu;
 			productName = JWSlideMenu;
 			productReference = 13EBC5E41472139A000B74D1 /* JWSlideMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13EBC62A14730133000B74D1 /* JWSlideMenuHD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13EBC63C14730134000B74D1 /* Build configuration list for PBXNativeTarget "JWSlideMenuHD" */;
+			buildPhases = (
+				13EBC62714730133000B74D1 /* Sources */,
+				13EBC62814730133000B74D1 /* Frameworks */,
+				13EBC62914730133000B74D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWSlideMenuHD;
+			productName = JWSlideMenuHD;
+			productReference = 13EBC62B14730133000B74D1 /* JWSlideMenuHD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,6 +245,7 @@
 			projectRoot = "";
 			targets = (
 				13EBC5E31472139A000B74D1 /* JWSlideMenu */,
+				13EBC62A14730133000B74D1 /* JWSlideMenuHD */,
 			);
 		};
 /* End PBXProject section */
@@ -188,11 +256,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EBC5F31472139A000B74D1 /* InfoPlist.strings in Resources */,
-				13EBC60714721446000B74D1 /* JWSlideMenu.xib in Resources */,
 				13EBC60B147229C7000B74D1 /* menu_icon_32x32.png in Resources */,
 				13EBC60D14722A37000B74D1 /* menu_icon_20x20.png in Resources */,
 				13EBC61D14724C32000B74D1 /* FirstViewController.xib in Resources */,
 				13EBC62214724C46000B74D1 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EBC62914730133000B74D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC63514730134000B74D1 /* InfoPlist.strings in Resources */,
+				13EBC64014730225000B74D1 /* menu_icon_20x20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +284,17 @@
 				13EBC60614721446000B74D1 /* JWSlideMenuController.m in Sources */,
 				13EBC61C14724C32000B74D1 /* FirstViewController.m in Sources */,
 				13EBC62114724C46000B74D1 /* SecondViewController.m in Sources */,
+				13EBC6261472F6DF000B74D1 /* ThirdViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EBC62714730133000B74D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC63714730134000B74D1 /* main.m in Sources */,
+				13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */,
+				13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +305,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				13EBC5F21472139A000B74D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13EBC63314730134000B74D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13EBC63414730134000B74D1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -290,6 +385,32 @@
 			};
 			name = Release;
 		};
+		13EBC63D14730134000B74D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JWSlideMenuHD/JWSlideMenuHD-Prefix.pch";
+				INFOPLIST_FILE = "JWSlideMenuHD/JWSlideMenuHD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		13EBC63E14730134000B74D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JWSlideMenuHD/JWSlideMenuHD-Prefix.pch";
+				INFOPLIST_FILE = "JWSlideMenuHD/JWSlideMenuHD-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -310,6 +431,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		13EBC63C14730134000B74D1 /* Build configuration list for PBXNativeTarget "JWSlideMenuHD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EBC63D14730134000B74D1 /* Debug */,
+				13EBC63E14730134000B74D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>JWSlideMenuHD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>13EBC5E31472139A000B74D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13EBC62A14730133000B74D1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

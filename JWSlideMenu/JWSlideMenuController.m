@@ -6,20 +6,50 @@
 //  Copyright (c) 2011 Jeremie Weldin. All rights reserved.
 //
 
+//TODO: remove the xib and do all the layout in initwithnib or viewdidload
+
 #import "JWSlideMenuController.h"
 
 @implementation JWSlideMenuController
+
 @synthesize menuTableView;
 @synthesize menuView;
 @synthesize contentWrapperView;
 @synthesize contentView;
 @synthesize menuButton;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-
+        
+        CGRect masterRect = self.view.bounds;
+        
+        CGRect menuFrame = CGRectMake(0.0, 0.0, masterRect.size.width - 53, masterRect.size.height);
+        CGRect contentWrapperFrame = CGRectMake(0.0, 0.0, masterRect.size.width, masterRect.size.height);
+        CGRect contentFrame = CGRectMake(0.0, 44.0, masterRect.size.width, masterRect.size.height - 44);
+        CGRect toolbarFrame = CGRectMake(0.0, 0.0, masterRect.size.width, 44);
+        
+        self.menuTableView = [[UITableView alloc] initWithFrame:menuFrame];
+        self.menuTableView.dataSource = self;
+        self.menuTableView.delegate = self;
+        self.menuView = [[UIView alloc] initWithFrame:menuFrame];
+                
+        self.contentWrapperView = [[UIView alloc] initWithFrame:contentWrapperFrame];
+        UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:toolbarFrame];
+        toolBar.tintColor = [UIColor redColor];
+        self.menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon_20x20.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMenu)];
+        [toolBar setItems:[NSArray arrayWithObject:self.menuButton] animated:YES];
+        self.contentView = [[UIView alloc] initWithFrame:contentFrame];
+        self.contentView.backgroundColor = [UIColor grayColor];
+        
+        [self.menuView addSubview:self.menuTableView];
+        
+        [self.contentWrapperView addSubview:toolBar];
+        [self.contentWrapperView insertSubview:self.contentView aboveSubview:toolBar];
+        
+        [self.view addSubview:self.menuView];
+        [self.view insertSubview:self.contentWrapperView aboveSubview:self.menuView];
     }
     return self;
 }
@@ -132,6 +162,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    UIToolbar *toolbar = [[UIToolbar alloc] init];
+//    toolbar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
+//    NSMutableArray *items = [[NSMutableArray alloc] init];
+//    [items addObject:[[[UIBarButtonItem alloc] initWith....] autorelease]];
+//    [toolbar setItems:items animated:NO];
+//    [items release];
+//    [self.view addSubview:toolbar];
+//    [toolbar release];
 }
 
 - (void)viewDidUnload
@@ -149,7 +187,8 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 - (void)dealloc {

@@ -10,19 +10,17 @@
 
 @interface JWSlideMenuController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
-    //NSArray *childControllers;
-
-    IBOutlet UITableView *menuTableView;
-    IBOutlet UIView *menuView;
-    IBOutlet UIView *contentWrapperView;
-    IBOutlet UIBarButtonItem *menuButton;
+    UITableView *menuTableView;
+    UIView *menuView;
+    UIView *contentWrapperView;
+    UIBarButtonItem *menuButton;
 
 }
-@property (retain, nonatomic) IBOutlet UITableView *menuTableView;
-@property (retain, nonatomic) IBOutlet UIView *menuView;
-@property (retain, nonatomic) IBOutlet UIView *contentWrapperView;
-@property (retain, nonatomic) IBOutlet UIView *contentView;
-@property (retain, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+@property (retain, nonatomic) UITableView *menuTableView;
+@property (retain, nonatomic) UIView *menuView;
+@property (retain, nonatomic) UIView *contentWrapperView;
+@property (retain, nonatomic) UIView *contentView;
+@property (retain, nonatomic) UIBarButtonItem *menuButton;
 
 -(IBAction)toggleMenu;
 -(void)addViewController:(UIViewController *)controller;
