@@ -14,6 +14,7 @@
 
 @synthesize menuTableView;
 @synthesize menuView;
+@synthesize contentToolbar;
 @synthesize contentWrapperView;
 @synthesize contentView;
 @synthesize menuButton;
@@ -24,8 +25,9 @@
     if (self) {
         
         CGRect masterRect = self.view.bounds;
+        float menuWidth = 267.0; //masterRect.size.width - 53
         
-        CGRect menuFrame = CGRectMake(0.0, 0.0, masterRect.size.width - 53, masterRect.size.height);
+        CGRect menuFrame = CGRectMake(0.0, 0.0, menuWidth, masterRect.size.height);
         CGRect contentWrapperFrame = CGRectMake(0.0, 0.0, masterRect.size.width, masterRect.size.height);
         CGRect contentFrame = CGRectMake(0.0, 44.0, masterRect.size.width, masterRect.size.height - 44);
         CGRect toolbarFrame = CGRectMake(0.0, 0.0, masterRect.size.width, 44);
@@ -36,11 +38,15 @@
         self.menuView = [[UIView alloc] initWithFrame:menuFrame];
                 
         self.contentWrapperView = [[UIView alloc] initWithFrame:contentWrapperFrame];
+        self.contentWrapperView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        
         UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:toolbarFrame];
+        toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         toolBar.tintColor = [UIColor redColor];
         self.menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon_20x20.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMenu)];
         [toolBar setItems:[NSArray arrayWithObject:self.menuButton] animated:YES];
         self.contentView = [[UIView alloc] initWithFrame:contentFrame];
+        self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.contentView.backgroundColor = [UIColor grayColor];
         
         [self.menuView addSubview:self.menuTableView];
@@ -195,6 +201,7 @@
     [menuView release];
     [contentWrapperView release];
     [menuButton release];
+    [contentToolbar release];
     [menuTableView release];
     [contentView release];
     [super dealloc];

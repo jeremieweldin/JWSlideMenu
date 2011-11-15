@@ -12,12 +12,14 @@
 {
     UITableView *menuTableView;
     UIView *menuView;
+    UIToolbar *contentToolbar;
     UIView *contentWrapperView;
     UIBarButtonItem *menuButton;
 
 }
 @property (retain, nonatomic) UITableView *menuTableView;
 @property (retain, nonatomic) UIView *menuView;
+@property (retain, nonatomic) UIToolbar *contentToolbar;
 @property (retain, nonatomic) UIView *contentWrapperView;
 @property (retain, nonatomic) UIView *contentView;
 @property (retain, nonatomic) UIBarButtonItem *menuButton;

@@ -29,6 +29,10 @@
 		13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC63A14730134000B74D1 /* JWAppDelegate.m */; };
 		13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC60414721446000B74D1 /* JWSlideMenuController.m */; };
 		13EBC64014730225000B74D1 /* menu_icon_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */; };
+		13EBC64614732733000B74D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EA1472139A000B74D1 /* Foundation.framework */; };
+		13EBC65014732746000B74D1 /* JWSlideMenuController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13EBC60314721446000B74D1 /* JWSlideMenuController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13EBC65114732751000B74D1 /* JWSlideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EBC60414721446000B74D1 /* JWSlideMenuController.m */; };
+		13EBC6531473279F000B74D1 /* menu_icon_20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,8 @@
 		13EBC63814730134000B74D1 /* JWSlideMenuHD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWSlideMenuHD-Prefix.pch"; sourceTree = "<group>"; };
 		13EBC63914730134000B74D1 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
 		13EBC63A14730134000B74D1 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
+		13EBC64514732733000B74D1 /* libJWSlideMenuLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJWSlideMenuLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EBC64914732734000B74D1 /* JWSlideMenuLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWSlideMenuLib-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13EBC64214732733000B74D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC64614732733000B74D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +107,7 @@
 				13EBC609147229A9000B74D1 /* Images */,
 				13EBC5EE1472139A000B74D1 /* JWSlideMenu */,
 				13EBC63014730134000B74D1 /* JWSlideMenuHD */,
+				13EBC64714732733000B74D1 /* JWSlideMenuLib */,
 				13EBC5E71472139A000B74D1 /* Frameworks */,
 				13EBC5E51472139A000B74D1 /* Products */,
 			);
@@ -103,6 +118,7 @@
 			children = (
 				13EBC5E41472139A000B74D1 /* JWSlideMenu.app */,
 				13EBC62B14730133000B74D1 /* JWSlideMenuHD.app */,
+				13EBC64514732733000B74D1 /* libJWSlideMenuLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,7 +202,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		13EBC64714732733000B74D1 /* JWSlideMenuLib */ = {
+			isa = PBXGroup;
+			children = (
+				13EBC64814732734000B74D1 /* Supporting Files */,
+			);
+			path = JWSlideMenuLib;
+			sourceTree = "<group>";
+		};
+		13EBC64814732734000B74D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				13EBC64914732734000B74D1 /* JWSlideMenuLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		13EBC64314732733000B74D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC65014732746000B74D1 /* JWSlideMenuController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		13EBC5E31472139A000B74D1 /* JWSlideMenu */ = {
@@ -223,6 +266,24 @@
 			productReference = 13EBC62B14730133000B74D1 /* JWSlideMenuHD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		13EBC64414732733000B74D1 /* JWSlideMenuLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13EBC64D14732734000B74D1 /* Build configuration list for PBXNativeTarget "JWSlideMenuLib" */;
+			buildPhases = (
+				13EBC64114732733000B74D1 /* Sources */,
+				13EBC64214732733000B74D1 /* Frameworks */,
+				13EBC64314732733000B74D1 /* Headers */,
+				13EBC6521473279A000B74D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWSlideMenuLib;
+			productName = JWSlideMenuLib;
+			productReference = 13EBC64514732733000B74D1 /* libJWSlideMenuLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +307,7 @@
 			targets = (
 				13EBC5E31472139A000B74D1 /* JWSlideMenu */,
 				13EBC62A14730133000B74D1 /* JWSlideMenuHD */,
+				13EBC64414732733000B74D1 /* JWSlideMenuLib */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +334,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13EBC6521473279A000B74D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC6531473279F000B74D1 /* menu_icon_20x20.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -295,6 +365,14 @@
 				13EBC63714730134000B74D1 /* main.m in Sources */,
 				13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */,
 				13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EBC64114732733000B74D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13EBC65114732751000B74D1 /* JWSlideMenuController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +489,30 @@
 			};
 			name = Release;
 		};
+		13EBC64E14732734000B74D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JWSlideMenuLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JWSlideMenuLib/JWSlideMenuLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		13EBC64F14732734000B74D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/JWSlideMenuLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JWSlideMenuLib/JWSlideMenuLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -437,6 +539,14 @@
 			buildConfigurations = (
 				13EBC63D14730134000B74D1 /* Debug */,
 				13EBC63E14730134000B74D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		13EBC64D14732734000B74D1 /* Build configuration list for PBXNativeTarget "JWSlideMenuLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13EBC64E14732734000B74D1 /* Debug */,
+				13EBC64F14732734000B74D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

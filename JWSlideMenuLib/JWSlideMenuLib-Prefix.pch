@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'JWSlideMenuLib' target in the 'JWSlideMenuLib' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
