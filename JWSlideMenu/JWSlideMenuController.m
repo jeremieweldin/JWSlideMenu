@@ -18,6 +18,7 @@
 @synthesize contentWrapperView;
 @synthesize contentView;
 @synthesize menuButton;
+@synthesize menuLabelColor;
 
 - (id)init
 {
@@ -32,9 +33,16 @@
         CGRect contentFrame = CGRectMake(0.0, 44.0, masterRect.size.width, masterRect.size.height - 44);
         CGRect toolbarFrame = CGRectMake(0.0, 0.0, masterRect.size.width, 44);
         
+        self.menuLabelColor = [UIColor whiteColor];
+        
         self.menuTableView = [[UITableView alloc] initWithFrame:menuFrame];
         self.menuTableView.dataSource = self;
         self.menuTableView.delegate = self;
+        self.menuTableView.backgroundColor = [UIColor darkGrayColor];
+        self.menuTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        self.menuTableView.separatorColor = [UIColor whiteColor];
+        //self.menuTableView.
+        
         self.menuView = [[UIView alloc] initWithFrame:menuFrame];
                 
         self.contentWrapperView = [[UIView alloc] initWithFrame:contentWrapperFrame];
@@ -92,30 +100,11 @@
 -(void)addViewController:(UIViewController *)controller
 {
     [self addChildViewController:controller];
-    
+    if([self.childViewControllers count] == 1)
+    {
+        [self.contentView addSubview:controller.view];
+    }
 }
-
-//- (void)switchToNewController:(UIViewController *)newController
-//{   
-//    if([self.childViewControllers count] == 0)
-//    {
-//        [self addChildViewController:newController];
-//        [self.backsplash addSubview:newController.view];
-//        newController.view.frame = self.backsplash.frame;
-//        
-//    }
-//    else
-//    {
-//        UIViewController *previousChildViewController = [self.childViewControllers objectAtIndex:0];
-//        [self addChildViewController:newController];
-//        [self transitionFromViewController:previousChildViewController toViewController:newController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:NULL completion:NULL];
-//        
-//        newController.view.frame = self.backsplash.frame;
-//        
-//        [previousChildViewController removeFromParentViewController];
-//        [previousChildViewController release];
-//    }
-//}
 
 #pragma mark -UITableViewDataSource/Delegate
 
@@ -128,6 +117,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
                                       reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         // Do something here......................
     }
     
@@ -135,6 +125,7 @@
     
     UIViewController *controller = (UIViewController *)[self.childViewControllers objectAtIndex:indexPath.row];
     cell.textLabel.text = controller.title;
+    cell.textLabel.textColor = menuLabelColor;
     
     //[controller release];
     return cell;
@@ -168,14 +159,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    UIToolbar *toolbar = [[UIToolbar alloc] init];
-//    toolbar.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
-//    NSMutableArray *items = [[NSMutableArray alloc] init];
-//    [items addObject:[[[UIBarButtonItem alloc] initWith....] autorelease]];
-//    [toolbar setItems:items animated:NO];
-//    [items release];
-//    [self.view addSubview:toolbar];
-//    [toolbar release];
 }
 
 - (void)viewDidUnload
@@ -185,6 +168,7 @@
     [self setMenuButton:nil];
     [self setMenuTableView:nil];
     [self setContentView:nil];
+    [self setMenuLabelColor:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -204,6 +188,7 @@
     [contentToolbar release];
     [menuTableView release];
     [contentView release];
+    [menuLabelColor release];
     [super dealloc];
 }
 @end

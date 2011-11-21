@@ -33,8 +33,6 @@
     s.title = @"Second";
     
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
-    slideMenu.menuTableView.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0];
-    slideMenu.menuTableView.separatorColor = [UIColor colorWithRed:0.0 green:0.7 blue:0.0 alpha:1.0];
     
     [slideMenu addViewController:f];
     [slideMenu addViewController:s];

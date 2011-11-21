@@ -46,8 +46,8 @@
 		13EBC5F61472139A000B74D1 /* JWSlideMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWSlideMenu-Prefix.pch"; sourceTree = "<group>"; };
 		13EBC5F71472139A000B74D1 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
 		13EBC5F81472139A000B74D1 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
-		13EBC60314721446000B74D1 /* JWSlideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSlideMenuController.h; sourceTree = "<group>"; };
-		13EBC60414721446000B74D1 /* JWSlideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSlideMenuController.m; sourceTree = "<group>"; };
+		13EBC60314721446000B74D1 /* JWSlideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWSlideMenuController.h; path = JWSlideMenu/JWSlideMenuController.h; sourceTree = "<group>"; };
+		13EBC60414721446000B74D1 /* JWSlideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWSlideMenuController.m; path = JWSlideMenu/JWSlideMenuController.m; sourceTree = "<group>"; };
 		13EBC60A147229C7000B74D1 /* menu_icon_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_32x32.png; sourceTree = "<group>"; };
 		13EBC60C14722A37000B74D1 /* menu_icon_20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon_20x20.png; sourceTree = "<group>"; };
 		13EBC61914724C31000B74D1 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
@@ -101,10 +101,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13EBC5D91472139A000B74D1 = {
+		135C46CF147A184F00A879DE /* JWSlideMenuController */ = {
 			isa = PBXGroup;
 			children = (
 				13EBC609147229A9000B74D1 /* Images */,
+				13EBC60314721446000B74D1 /* JWSlideMenuController.h */,
+				13EBC60414721446000B74D1 /* JWSlideMenuController.m */,
+			);
+			name = JWSlideMenuController;
+			sourceTree = "<group>";
+		};
+		13EBC5D91472139A000B74D1 = {
+			isa = PBXGroup;
+			children = (
+				135C46CF147A184F00A879DE /* JWSlideMenuController */,
 				13EBC5EE1472139A000B74D1 /* JWSlideMenu */,
 				13EBC63014730134000B74D1 /* JWSlideMenuHD */,
 				13EBC64714732733000B74D1 /* JWSlideMenuLib */,
@@ -138,8 +148,6 @@
 			children = (
 				13EBC62314725575000B74D1 /* Non-Specific */,
 				13EBC5EF1472139A000B74D1 /* Supporting Files */,
-				13EBC60314721446000B74D1 /* JWSlideMenuController.h */,
-				13EBC60414721446000B74D1 /* JWSlideMenuController.m */,
 			);
 			path = JWSlideMenu;
 			sourceTree = "<group>";
@@ -541,6 +549,7 @@
 				13EBC63E14730134000B74D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13EBC64D14732734000B74D1 /* Build configuration list for PBXNativeTarget "JWSlideMenuLib" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +558,7 @@
 				13EBC64F14732734000B74D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
