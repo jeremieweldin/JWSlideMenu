@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class JWSlideMenuController;
 
-@interface JWNavigationController : UIViewController
+@interface JWNavigationController : UIViewController <UINavigationBarDelegate>
 
 @property (nonatomic, retain) UINavigationBar *navigationBar;
 @property (nonatomic, retain) UIView *contentView;

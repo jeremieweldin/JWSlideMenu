@@ -6,7 +6,7 @@
 //  Copyright (c) 2011 Jeremie Weldin. All rights reserved.
 //
 
-//TODO: remove the xib and do all the layout in initwithnib or viewdidload
+//TODO: Create test that exercises the push/pop on the navigation controller
 
 #import "JWSlideMenuController.h"
 #import "JWNavigationController.h"

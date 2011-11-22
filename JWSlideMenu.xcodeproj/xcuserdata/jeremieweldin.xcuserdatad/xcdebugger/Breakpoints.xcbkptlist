@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343637742.843254"
+         timestampString = "343641990.524885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "69"
-         endingLineNumber = "69"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
          landmarkName = "-toggleMenu"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343637742.843254"
+         timestampString = "343641990.524885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-tableView:cellForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,21 +37,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343637742.843254"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "125"
-         endingLineNumber = "125"
-         landmarkName = "-tableView:numberOfRowsInSection:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343637742.843254"
+         timestampString = "343641990.524885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "126"
@@ -65,11 +51,25 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343637742.843254"
+         timestampString = "343641990.524885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
+         startingLineNumber = "127"
+         endingLineNumber = "127"
+         landmarkName = "-tableView:numberOfRowsInSection:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "JWSlideMenu/JWSlideMenuController.m"
+         timestampString = "343641990.524885"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -79,11 +79,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWNavigationController.m"
-         timestampString = "343641537.28497"
+         timestampString = "343642023.711348"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "60"
-         endingLineNumber = "60"
+         startingLineNumber = "59"
+         endingLineNumber = "59"
          landmarkName = "-initWithRootViewController:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -93,11 +93,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "JWSlideMenu/JWSlideMenuController.m"
-         timestampString = "343638220.898907"
+         timestampString = "343641990.524885"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "95"
-         endingLineNumber = "95"
+         startingLineNumber = "96"
+         endingLineNumber = "96"
          landmarkName = "-addViewController:"
          landmarkType = "5">
       </FileBreakpoint>

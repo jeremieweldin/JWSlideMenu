@@ -46,8 +46,7 @@
         
         self.navigationBar = [[[UINavigationBar alloc] initWithFrame:navBarFrame] autorelease];
         self.navigationBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        //[self.navigationBar pushNavigationItem:[[UINavigationItem alloc] initWithTitle:@"SlideMenu"] animated:NO];
-        //UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon_20x20.png"] style:UIBarButtonItemStyleBordered target:self.slideMenuController action:@selector(toggleMenu)];
+        self.navigationBar.delegate = self;
         [self.view insertSubview:self.navigationBar aboveSubview:self.contentView];
         
     }
@@ -82,6 +81,20 @@
     [super viewDidLoad];
 }
 */
+
+#pragma mark - UINavigationBarDelegate
+
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
+{
+    
+}
+
+- (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item
+{
+    
+}
+
+#pragma mark - Stack Interaction
 
 - (void)pushViewController:(UIViewController *)controller
 {
