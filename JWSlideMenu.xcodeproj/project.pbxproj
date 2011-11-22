@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		135C46DA147B713F00A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
+		135C46DC147B72D900A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
+		135C46DD147B72DA00A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
 		13EBC5E91472139A000B74D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5E81472139A000B74D1 /* UIKit.framework */; };
 		13EBC5EB1472139A000B74D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EA1472139A000B74D1 /* Foundation.framework */; };
 		13EBC5ED1472139A000B74D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EC1472139A000B74D1 /* CoreGraphics.framework */; };
@@ -36,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		135C46D8147B713F00A879DE /* JWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWNavigationController.h; path = JWSlideMenu/JWNavigationController.h; sourceTree = "<group>"; };
+		135C46D9147B713F00A879DE /* JWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWNavigationController.m; path = JWSlideMenu/JWNavigationController.m; sourceTree = "<group>"; };
 		13EBC5E41472139A000B74D1 /* JWSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EBC5E81472139A000B74D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EBC5EA1472139A000B74D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +112,8 @@
 				13EBC609147229A9000B74D1 /* Images */,
 				13EBC60314721446000B74D1 /* JWSlideMenuController.h */,
 				13EBC60414721446000B74D1 /* JWSlideMenuController.m */,
+				135C46D8147B713F00A879DE /* JWNavigationController.h */,
+				135C46D9147B713F00A879DE /* JWNavigationController.m */,
 			);
 			name = JWSlideMenuController;
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 				13EBC61C14724C32000B74D1 /* FirstViewController.m in Sources */,
 				13EBC62114724C46000B74D1 /* SecondViewController.m in Sources */,
 				13EBC6261472F6DF000B74D1 /* ThirdViewController.m in Sources */,
+				135C46DA147B713F00A879DE /* JWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +381,7 @@
 				13EBC63714730134000B74D1 /* main.m in Sources */,
 				13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */,
 				13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */,
+				135C46DC147B72D900A879DE /* JWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EBC65114732751000B74D1 /* JWSlideMenuController.m in Sources */,
+				135C46DD147B72DA00A879DE /* JWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
