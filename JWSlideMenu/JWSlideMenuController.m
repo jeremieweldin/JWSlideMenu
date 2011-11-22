@@ -9,15 +9,14 @@
 //TODO: remove the xib and do all the layout in initwithnib or viewdidload
 
 #import "JWSlideMenuController.h"
+#import "JWNavigationController.h"
 
 @implementation JWSlideMenuController
 
 @synthesize menuTableView;
 @synthesize menuView;
 @synthesize contentToolbar;
-@synthesize contentWrapperView;
 @synthesize contentView;
-@synthesize menuButton;
 @synthesize menuLabelColor;
 
 - (id)init
@@ -29,9 +28,7 @@
         float menuWidth = 267.0; //masterRect.size.width - 53
         
         CGRect menuFrame = CGRectMake(0.0, 0.0, menuWidth, masterRect.size.height);
-        CGRect contentWrapperFrame = CGRectMake(0.0, 0.0, masterRect.size.width, masterRect.size.height);
-        CGRect contentFrame = CGRectMake(0.0, 44.0, masterRect.size.width, masterRect.size.height - 44);
-        CGRect toolbarFrame = CGRectMake(0.0, 0.0, masterRect.size.width, 44);
+        CGRect contentFrame = CGRectMake(0.0, 0.0, masterRect.size.width, masterRect.size.height);
         
         self.menuLabelColor = [UIColor whiteColor];
         
@@ -41,29 +38,16 @@
         self.menuTableView.backgroundColor = [UIColor darkGrayColor];
         self.menuTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.menuTableView.separatorColor = [UIColor whiteColor];
-        //self.menuTableView.
-        
-        self.menuView = [[UIView alloc] initWithFrame:menuFrame];
                 
-        self.contentWrapperView = [[UIView alloc] initWithFrame:contentWrapperFrame];
-        self.contentWrapperView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        
-        UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:toolbarFrame];
-        toolBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        toolBar.tintColor = [UIColor redColor];
-        self.menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu_icon_20x20.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMenu)];
-        [toolBar setItems:[NSArray arrayWithObject:self.menuButton] animated:YES];
+        self.menuView = [[UIView alloc] initWithFrame:menuFrame];
+        [self.menuView addSubview:self.menuTableView];
+                
         self.contentView = [[UIView alloc] initWithFrame:contentFrame];
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.contentView.backgroundColor = [UIColor grayColor];
         
-        [self.menuView addSubview:self.menuTableView];
-        
-        [self.contentWrapperView addSubview:toolBar];
-        [self.contentWrapperView insertSubview:self.contentView aboveSubview:toolBar];
-        
         [self.view addSubview:self.menuView];
-        [self.view insertSubview:self.contentWrapperView aboveSubview:self.menuView];
+        [self.view insertSubview:self.contentView aboveSubview:self.menuView];
     }
     return self;
 }
@@ -82,16 +66,16 @@
     [UIView beginAnimations:@"Menu Slide" context:nil];
     [UIView setAnimationDuration:0.2];
         
-    if(self.contentWrapperView.frame.origin.x == 0) //Menu is hidden
+    if(self.contentView.frame.origin.x == 0) //Menu is hidden
     {
-        CGRect newFrame = CGRectOffset(self.contentWrapperView.frame, self.menuView.frame.size.width, 0.0);
-        self.contentWrapperView.frame = newFrame;
+        CGRect newFrame = CGRectOffset(self.contentView.frame, self.menuView.frame.size.width, 0.0);
+        self.contentView.frame = newFrame;
     }
     else //Menu is shown
     {
         [menuTableView reloadData];
-        CGRect newFrame = CGRectOffset(self.contentWrapperView.frame, -(self.menuView.frame.size.width), 0.0);
-        self.contentWrapperView.frame = newFrame;
+        CGRect newFrame = CGRectOffset(self.contentView.frame, -(self.menuView.frame.size.width), 0.0);
+        self.contentView.frame = newFrame;
     }
     
     [UIView commitAnimations];
@@ -100,6 +84,12 @@
 -(void)addViewController:(UIViewController *)controller
 {
     [self addChildViewController:controller];
+    
+    if([controller isKindOfClass:[JWNavigationController class]])
+    {
+        ((JWNavigationController *)controller).slideMenuController = self;
+    }
+    
     if([self.childViewControllers count] == 1)
     {
         [self.contentView addSubview:controller.view];
@@ -145,6 +135,7 @@
 {
     //UIViewController *previousChildViewController =
     //[self transitionFromViewController:previousChildViewController toViewController:newController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:NULL completion:NULL];
+    
     if([contentView.subviews count] == 1)
     {
         [[contentView.subviews objectAtIndex:0] removeFromSuperview];
@@ -164,10 +155,8 @@
 - (void)viewDidUnload
 {
     [self setMenuView:nil];
-    [self setContentWrapperView:nil];
-    [self setMenuButton:nil];
-    [self setMenuTableView:nil];
     [self setContentView:nil];
+    [self setMenuTableView:nil];
     [self setMenuLabelColor:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -183,11 +172,9 @@
 
 - (void)dealloc {
     [menuView release];
-    [contentWrapperView release];
-    [menuButton release];
+    [contentView release];
     [contentToolbar release];
     [menuTableView release];
-    [contentView release];
     [menuLabelColor release];
     [super dealloc];
 }

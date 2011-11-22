@@ -8,6 +8,7 @@
 
 #import "JWAppDelegate.h"
 #import "JWSlideMenuController.h"
+#import "JWNavigationController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 
@@ -28,17 +29,27 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     UIViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
-    f.title = @"First";
+    //f.title = @"First";
+    
+    JWNavigationController *fNav = [[JWNavigationController alloc] initWithRootViewController:f];
+    
+    
     UIViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
-    s.title = @"Second";
+    //s.title = @"Second";
+    
+    JWNavigationController *sNav = [[JWNavigationController alloc] initWithRootViewController:s];
+    
     
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
     
-    [slideMenu addViewController:f];
-    [slideMenu addViewController:s];
+    [slideMenu addViewController:fNav];
+    [slideMenu addViewController:sNav];
     
     self.window.rootViewController = slideMenu;
     
+    
+    [fNav release];
+    [sNav release];
     [f release];
     [s release];
     
