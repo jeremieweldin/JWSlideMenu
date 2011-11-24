@@ -7,6 +7,7 @@
 //
 
 #import "JWNavigationController.h"
+#import "JWSlideMenuViewController.h"
 
 @implementation JWNavigationController
 
@@ -54,7 +55,7 @@
 }
 
 
-- (id)initWithRootViewController:(UIViewController *)rootViewController
+- (id)initWithRootViewController:(JWSlideMenuViewController *)rootViewController
 {
     self = [self init];
     if(self) {
@@ -64,6 +65,7 @@
         [self addChildViewController:rootViewController];
         [self.contentView addSubview:rootViewController.view];
         [self.navigationBar pushNavigationItem:rootViewController.navigationItem animated:YES];
+        rootViewController.navigationController = self;
     }
     return self;
 }
@@ -86,7 +88,7 @@
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
 {
-    
+    [self popViewController];
 }
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item
@@ -96,10 +98,11 @@
 
 #pragma mark - Stack Interaction
 
-- (void)pushViewController:(UIViewController *)controller
+- (void)pushViewController:(JWSlideMenuViewController *)controller
 {
     [self addChildViewController:controller];
     [self.navigationBar pushNavigationItem:controller.navigationItem animated:YES];
+    controller.navigationController = self;
     
     if([self.childViewControllers count] == 1)
     {
@@ -107,8 +110,8 @@
     }
     else
     {
-        UIViewController *previousController = [self.childViewControllers lastObject];
-        [self transitionFromViewController:previousController toViewController:controller duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:NULL completion:NULL];
+        UIViewController *previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
+        [self transitionFromViewController:previousController toViewController:controller duration:0.5 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
      }
 }
 
@@ -118,12 +121,11 @@
     UIViewController *previousController = nil;
     if([self.childViewControllers count] > 1)
     {
-        previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-1];
+        previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
     }
+    //[self.navigationBar popNavigationItemAnimated:YES];
+    [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
     [controller removeFromParentViewController];
-    [self.navigationBar popNavigationItemAnimated:YES];
-    [self transitionFromViewController:controller toViewController:previousController duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:NULL completion:NULL];
-    
     return controller;
 }
 

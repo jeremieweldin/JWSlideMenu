@@ -25,31 +25,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
-    //f.title = @"First";
-    
-    JWNavigationController *fNav = [[JWNavigationController alloc] initWithRootViewController:f];
-    
-    
-    UIViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
-    //s.title = @"Second";
-    
-    JWNavigationController *sNav = [[JWNavigationController alloc] initWithRootViewController:s];
-    
-    
+    JWSlideMenuViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
+    JWSlideMenuViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
+        
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
     
-    [slideMenu addViewController:fNav];
-    [slideMenu addViewController:sNav];
+    [slideMenu addViewController:f withTitle:@"First" andImage:nil];
+    [slideMenu addViewController:s withTitle:@"Second" andImage:nil];
     
     self.window.rootViewController = slideMenu;
     
-    
-    [fNav release];
-    [sNav release];
     [f release];
     [s release];
     

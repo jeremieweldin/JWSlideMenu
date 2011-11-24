@@ -7,8 +7,16 @@
 //
 
 #import "FirstViewController.h"
+#import "JWNavigationController.h"
+#import "ThirdViewController.h"
 
 @implementation FirstViewController
+
+-(IBAction)pushTest:(id)sender
+{
+    UIViewController *controller = [[ThirdViewController alloc] init];
+    [self.navigationController pushViewController:controller];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

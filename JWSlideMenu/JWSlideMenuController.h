@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JWNavigationController;
+@class JWSlideMenuViewController;
 
 @interface JWSlideMenuController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +19,8 @@
 @property (retain, nonatomic) UIColor *menuLabelColor;
 
 -(IBAction)toggleMenu;
--(void)addViewController:(UIViewController *)controller;
+//-(void)addViewController:(UIViewController *)controller;
+-(JWNavigationController *)addViewController:(JWSlideMenuViewController *)controller withTitle:(NSString *)title andImage:(UIImage *)image;
+
 
 @end

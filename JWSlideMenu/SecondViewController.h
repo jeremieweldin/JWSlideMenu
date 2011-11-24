@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWSlideMenuViewController.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : JWSlideMenuViewController
 
 @end

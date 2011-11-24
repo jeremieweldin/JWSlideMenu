@@ -10,6 +10,7 @@
 
 #import "JWSlideMenuController.h"
 #import "JWNavigationController.h"
+#import "JWSlideMenuViewController.h"
 
 @implementation JWSlideMenuController
 
@@ -81,20 +82,37 @@
     [UIView commitAnimations];
 }
 
--(void)addViewController:(UIViewController *)controller
+-(JWNavigationController *)addViewController:(JWSlideMenuViewController *)controller withTitle:(NSString *)title andImage:(UIImage *)image
 {
-    [self addChildViewController:controller];
-    
-    if([controller isKindOfClass:[JWNavigationController class]])
-    {
-        ((JWNavigationController *)controller).slideMenuController = self;
-    }
+    JWNavigationController *navController = [[[JWNavigationController alloc] initWithRootViewController:controller] autorelease];
+    navController.slideMenuController = self;
+    navController.title = title;
+
+    [self addChildViewController:navController];
     
     if([self.childViewControllers count] == 1)
     {
-        [self.contentView addSubview:controller.view];
+        [self.contentView addSubview:navController.view];
     }
+    
+    return navController;
 }
+
+
+//-(void)addViewController:(UIViewController *)controller
+//{
+//    [self addChildViewController:controller];
+//    
+//    if([controller isKindOfClass:[JWNavigationController class]])
+//    {
+//        ((JWNavigationController *)controller).slideMenuController = self;
+//    }
+//    
+//    if([self.childViewControllers count] == 1)
+//    {
+//        [self.contentView addSubview:controller.view];
+//    }
+//}
 
 #pragma mark -UITableViewDataSource/Delegate
 

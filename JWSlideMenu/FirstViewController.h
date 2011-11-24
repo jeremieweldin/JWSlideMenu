@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWSlideMenuViewController.h"
 
-@interface FirstViewController : UIViewController
-
+@interface FirstViewController : JWSlideMenuViewController
+-(IBAction)pushTest:(id)sender;
 @end

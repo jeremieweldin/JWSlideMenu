@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131F9F63147E999B00747567 /* JWSlideMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 131F9F61147E999B00747567 /* JWSlideMenuViewController.h */; };
+		131F9F64147E999B00747567 /* JWSlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F9F62147E999B00747567 /* JWSlideMenuViewController.m */; };
+		131F9F65147E999B00747567 /* JWSlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F9F62147E999B00747567 /* JWSlideMenuViewController.m */; };
+		131F9F66147E999B00747567 /* JWSlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F9F62147E999B00747567 /* JWSlideMenuViewController.m */; };
 		135C46DA147B713F00A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
 		135C46DC147B72D900A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
 		135C46DD147B72DA00A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
@@ -39,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131F9F61147E999B00747567 /* JWSlideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWSlideMenuViewController.h; path = JWSlideMenu/JWSlideMenuViewController.h; sourceTree = "<group>"; };
+		131F9F62147E999B00747567 /* JWSlideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWSlideMenuViewController.m; path = JWSlideMenu/JWSlideMenuViewController.m; sourceTree = "<group>"; };
 		135C46D8147B713F00A879DE /* JWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JWNavigationController.h; path = JWSlideMenu/JWNavigationController.h; sourceTree = "<group>"; };
 		135C46D9147B713F00A879DE /* JWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JWNavigationController.m; path = JWSlideMenu/JWNavigationController.m; sourceTree = "<group>"; };
 		13EBC5E41472139A000B74D1 /* JWSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,8 @@
 				13EBC60414721446000B74D1 /* JWSlideMenuController.m */,
 				135C46D8147B713F00A879DE /* JWNavigationController.h */,
 				135C46D9147B713F00A879DE /* JWNavigationController.m */,
+				131F9F61147E999B00747567 /* JWSlideMenuViewController.h */,
+				131F9F62147E999B00747567 /* JWSlideMenuViewController.m */,
 			);
 			name = JWSlideMenuController;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EBC65014732746000B74D1 /* JWSlideMenuController.h in Headers */,
+				131F9F63147E999B00747567 /* JWSlideMenuViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +380,7 @@
 				13EBC62114724C46000B74D1 /* SecondViewController.m in Sources */,
 				13EBC6261472F6DF000B74D1 /* ThirdViewController.m in Sources */,
 				135C46DA147B713F00A879DE /* JWNavigationController.m in Sources */,
+				131F9F64147E999B00747567 /* JWSlideMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +392,7 @@
 				13EBC63B14730134000B74D1 /* JWAppDelegate.m in Sources */,
 				13EBC63F147301AE000B74D1 /* JWSlideMenuController.m in Sources */,
 				135C46DC147B72D900A879DE /* JWNavigationController.m in Sources */,
+				131F9F65147E999B00747567 /* JWSlideMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +402,7 @@
 			files = (
 				13EBC65114732751000B74D1 /* JWSlideMenuController.m in Sources */,
 				135C46DD147B72DA00A879DE /* JWNavigationController.m in Sources */,
+				131F9F66147E999B00747567 /* JWSlideMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
