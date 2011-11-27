@@ -10,11 +10,14 @@
 
 @implementation ThirdViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.view = [[[UIView alloc] initWithFrame:super.view.bounds] autorelease];
+        UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(120.0, 220.0, 60.0, 21.0)] autorelease];
+        label.text = @"Third";
+        [self.view addSubview:label];
     }
     return self;
 }
@@ -29,12 +32,12 @@
 
 #pragma mark - View lifecycle
 
-/*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

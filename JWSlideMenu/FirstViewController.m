@@ -14,7 +14,7 @@
 
 -(IBAction)pushTest:(id)sender
 {
-    UIViewController *controller = [[ThirdViewController alloc] init];
+    UIViewController *controller = [[[ThirdViewController alloc] init] autorelease];
     [self.navigationController pushViewController:controller];
 }
 

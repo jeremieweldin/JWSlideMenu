@@ -33,17 +33,17 @@
         
         self.menuLabelColor = [UIColor whiteColor];
         
-        self.menuTableView = [[UITableView alloc] initWithFrame:menuFrame];
+        self.menuTableView = [[[UITableView alloc] initWithFrame:menuFrame] autorelease];
         self.menuTableView.dataSource = self;
         self.menuTableView.delegate = self;
         self.menuTableView.backgroundColor = [UIColor darkGrayColor];
         self.menuTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.menuTableView.separatorColor = [UIColor whiteColor];
                 
-        self.menuView = [[UIView alloc] initWithFrame:menuFrame];
+        self.menuView = [[[UIView alloc] initWithFrame:menuFrame] autorelease];
         [self.menuView addSubview:self.menuTableView];
                 
-        self.contentView = [[UIView alloc] initWithFrame:contentFrame];
+        self.contentView = [[[UIView alloc] initWithFrame:contentFrame] autorelease];
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         self.contentView.backgroundColor = [UIColor grayColor];
         
@@ -122,8 +122,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
-                                      reuseIdentifier:cellIdentifier];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
+                                      reuseIdentifier:cellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         // Do something here......................
