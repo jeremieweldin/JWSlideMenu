@@ -85,6 +85,7 @@
     JWNavigationController *navController = [[[JWNavigationController alloc] initWithRootViewController:controller] autorelease];
     navController.slideMenuController = self;
     navController.title = title;
+    navController.tabBarItem.image = image;
 
     [self addChildViewController:navController];
     
@@ -96,7 +97,7 @@
     return navController;
 }
 
-#pragma mark -UITableViewDataSource/Delegate
+#pragma mark - UITableViewDataSource/Delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -104,7 +105,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                       reuseIdentifier:cellIdentifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
@@ -113,11 +114,12 @@
     
     //TODO: either support tabbaritem or a protocol in order to handle images in the menu.
     
-    UIViewController *controller = (UIViewController *)[self.childViewControllers objectAtIndex:indexPath.row];
+    UIViewController *controller = (UIViewController *)[self.childViewControllers objectAtIndex:indexPath.row] ;
     cell.textLabel.text = controller.title;
     cell.textLabel.textColor = menuLabelColor;
     
-    //[controller release];
+    cell.imageView.image = controller.tabBarItem.image;
+    
     return cell;
 }
 

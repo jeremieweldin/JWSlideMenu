@@ -16,6 +16,8 @@
 		135C46DD147B72DA00A879DE /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135C46D9147B713F00A879DE /* JWNavigationController.m */; };
 		13E48BAB148359D500BA6018 /* FirstHDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13E48BA9148359D500BA6018 /* FirstHDViewController.m */; };
 		13E48BAC148359D500BA6018 /* FirstHDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E48BAA148359D500BA6018 /* FirstHDViewController.xib */; };
+		13E48BB314841B3700BA6018 /* star 20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E48BB214841B3700BA6018 /* star 20x20.png */; };
+		13E48BB414841B3700BA6018 /* star 20x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E48BB214841B3700BA6018 /* star 20x20.png */; };
 		13EBC5E91472139A000B74D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5E81472139A000B74D1 /* UIKit.framework */; };
 		13EBC5EB1472139A000B74D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EA1472139A000B74D1 /* Foundation.framework */; };
 		13EBC5ED1472139A000B74D1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EBC5EC1472139A000B74D1 /* CoreGraphics.framework */; };
@@ -52,6 +54,7 @@
 		13E48BA9148359D500BA6018 /* FirstHDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstHDViewController.m; sourceTree = "<group>"; };
 		13E48BAA148359D500BA6018 /* FirstHDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstHDViewController.xib; sourceTree = "<group>"; };
 		13E48BAD14835C1700BA6018 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		13E48BB214841B3700BA6018 /* star 20x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star 20x20.png"; sourceTree = "<group>"; };
 		13EBC5E41472139A000B74D1 /* JWSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EBC5E81472139A000B74D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EBC5EA1472139A000B74D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -133,6 +136,7 @@
 		13EBC5D91472139A000B74D1 = {
 			isa = PBXGroup;
 			children = (
+				13E48BB214841B3700BA6018 /* star 20x20.png */,
 				13E48BAD14835C1700BA6018 /* README.md */,
 				135C46CF147A184F00A879DE /* JWSlideMenuController */,
 				13EBC5EE1472139A000B74D1 /* JWSlideMenu */,
@@ -344,6 +348,7 @@
 				13EBC60D14722A37000B74D1 /* menu_icon_20x20.png in Resources */,
 				13EBC61D14724C32000B74D1 /* FirstViewController.xib in Resources */,
 				13EBC62214724C46000B74D1 /* SecondViewController.xib in Resources */,
+				13E48BB314841B3700BA6018 /* star 20x20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +359,7 @@
 				13EBC63514730134000B74D1 /* InfoPlist.strings in Resources */,
 				13EBC64014730225000B74D1 /* menu_icon_20x20.png in Resources */,
 				13E48BAC148359D500BA6018 /* FirstHDViewController.xib in Resources */,
+				13E48BB414841B3700BA6018 /* star 20x20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
