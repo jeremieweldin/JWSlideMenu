@@ -49,6 +49,11 @@ Sample Code
         return YES;
     }
     
+License
+======
+
+This project is released under the MIT license. Please see the LICENSE file included in the project.
+    
     
 What's Next?
 ===============
