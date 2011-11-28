@@ -10,8 +10,8 @@ All children added to JWSlideMenuController get set as rootViewControllers in a 
 ScreenShots
 ==========
 
-<img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-L-Open.png?raw=true">
-<img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-P-Open.png?raw=true">
+<img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-L-Open.png?raw=true" width="480" height="320">
+<img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-P-Open.png?raw=true" width="320" height="480">
 <img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPad-L-Open.png?raw=true" width="512" height="384">
 <img src="https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPad-P-Open.png?raw=true" width="384" height="512">
 
