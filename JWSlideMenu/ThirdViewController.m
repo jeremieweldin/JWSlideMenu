@@ -18,6 +18,7 @@
         UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(120.0, 220.0, 60.0, 21.0)] autorelease];
         label.text = @"Third";
         [self.view addSubview:label];
+        self.title = @"Third";
     }
     return self;
 }

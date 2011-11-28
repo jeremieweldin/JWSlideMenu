@@ -70,20 +70,6 @@
     return self;
 }
 
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-    
-}
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
 #pragma mark - UINavigationBarDelegate
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
@@ -123,7 +109,7 @@
     {
         previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
     }
-    //[self.navigationBar popNavigationItemAnimated:YES];
+    
     [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
     [controller removeFromParentViewController];
     return controller;
@@ -138,8 +124,6 @@
     self.slideMenuController = nil;
     
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)dealloc {
@@ -151,7 +135,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return YES;
 }
 

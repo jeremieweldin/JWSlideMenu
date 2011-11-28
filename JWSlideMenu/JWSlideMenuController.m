@@ -6,8 +6,6 @@
 //  Copyright (c) 2011 Jeremie Weldin. All rights reserved.
 //
 
-//TODO: Create test that exercises the push/pop on the navigation controller
-
 #import "JWSlideMenuController.h"
 #import "JWNavigationController.h"
 #import "JWSlideMenuViewController.h"
@@ -98,22 +96,6 @@
     return navController;
 }
 
-
-//-(void)addViewController:(UIViewController *)controller
-//{
-//    [self addChildViewController:controller];
-//    
-//    if([controller isKindOfClass:[JWNavigationController class]])
-//    {
-//        ((JWNavigationController *)controller).slideMenuController = self;
-//    }
-//    
-//    if([self.childViewControllers count] == 1)
-//    {
-//        [self.contentView addSubview:controller.view];
-//    }
-//}
-
 #pragma mark -UITableViewDataSource/Delegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -177,14 +159,10 @@
     [self setMenuTableView:nil];
     [self setMenuLabelColor:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
     return YES;
 }
 

@@ -19,7 +19,6 @@
 @property (retain, nonatomic) UIColor *menuLabelColor;
 
 -(IBAction)toggleMenu;
-//-(void)addViewController:(UIViewController *)controller;
 -(JWNavigationController *)addViewController:(JWSlideMenuViewController *)controller withTitle:(NSString *)title andImage:(UIImage *)image;
 
 

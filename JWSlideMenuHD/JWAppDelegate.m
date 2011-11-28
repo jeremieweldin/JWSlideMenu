@@ -8,8 +8,7 @@
 
 #import "JWAppDelegate.h"
 #import "JWSlideMenuController.h"
-#import "FirstViewController.h"
-#import "SecondViewController.h"
+#import "FirstHDViewController.h"
 
 @implementation JWAppDelegate
 
@@ -25,23 +24,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-//    UIViewController *f = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
-//    f.title = @"First";
-//    UIViewController *s = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
-//    s.title = @"Second";
-    
+    JWSlideMenuViewController *f = [[[FirstHDViewController alloc]initWithNibName:@"FirstHDViewController" bundle:nil] autorelease];
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
-    
-//    [slideMenu addViewController:f];
-//    [slideMenu addViewController:s];
-    
+    [slideMenu addViewController:f withTitle:@"First" andImage:nil];
     self.window.rootViewController = slideMenu;
-    
-//    [f release];
-//    [s release];
     
     [self.window makeKeyAndVisible];
     return YES;
