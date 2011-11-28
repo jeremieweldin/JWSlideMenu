@@ -15,9 +15,17 @@ Use Example
         self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
         self.window.backgroundColor = [UIColor whiteColor];
         
-        JWSlideMenuViewController *f = [[[FirstHDViewController alloc]initWithNibName:@"FirstHDViewController" bundle:nil] autorelease];
+        //Create a new JWSlideMenuConroller container
         JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
+        
+        //Create a child controller to add to it.
+        //This needs to be a subclass of JWSlideMenuViewController, which is a subclass of UIViewController
+        JWSlideMenuViewController *f = [[[FirstHDViewController alloc]initWithNibName:@"FirstHDViewController" bundle:nil] autorelease];
+        
+        //Add the child controller to the container controller
         [slideMenu addViewController:f withTitle:@"First" andImage:nil];
+        
+        //Set the window's rootViewController to the container.
         self.window.rootViewController = slideMenu;
         
         [self.window makeKeyAndVisible];
