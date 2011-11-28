@@ -7,6 +7,13 @@ The code works, but is a bit more awkward to use than I would like. The idea is 
 
 All children added to JWSlideMenuController get set as rootViewControllers in a new instance of JWNavigationController.  JWNavigationController acts as a UINavigationController, but one that interacts with the JWSlideMenuController.
 
+ScreenShots
+==========
+
+!(https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-L-Open.png?raw=true)
+!https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPad-L-Open.png?raw=true)
+!https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPhone-P-Open.png?raw=true)
+!https://github.com/jeremieweldin/JWSlideMenu/blob/master/Screenshots/iPad-P-Open.png?raw=true)
 
 Usage
 =====
