@@ -7,12 +7,6 @@ The code works, but is a bit more awkward to use than I would like. The idea is 
 
 All children added to JWSlideMenuController get set as rootviewControllers in a new instance of JWNavigationController.  JWNavigationController acts as a UINavigationController, but one that interacts with the JWSlideMenuController.
 
-What is not working
-===============
-These items are being worked on next:
-* Does not yet support displaying the images for the menu items.
-* Does not build to a library yet.
-
 
 Use Example
 ==========
@@ -38,3 +32,10 @@ Use Example
         [self.window makeKeyAndVisible];
         return YES;
     }
+    
+What's Next?
+===============
+These items are being worked on next:
+
+* Does not yet support displaying the images for the menu items.
+* Does not build to a library yet.
