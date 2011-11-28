@@ -18,6 +18,8 @@ Usage
 5. See the code below.
 6. See the sample projects for more.
 
+Sample Code
+===========
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
         self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
