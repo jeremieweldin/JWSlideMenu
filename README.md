@@ -45,5 +45,4 @@ What's Next?
 ===============
 These items are being worked on next:
 
-* Does not yet support displaying the images for the menu items.
 * Does not build to a library yet.

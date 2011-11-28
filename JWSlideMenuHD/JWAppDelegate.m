@@ -28,7 +28,8 @@
     
     JWSlideMenuViewController *f = [[[FirstHDViewController alloc]initWithNibName:@"FirstHDViewController" bundle:nil] autorelease];
     JWSlideMenuController *slideMenu = [[[JWSlideMenuController alloc] init] autorelease];
-    [slideMenu addViewController:f withTitle:@"First" andImage:nil];
+    UIImage *starMenuImage = [UIImage imageNamed:@"star 20x20"];
+    [slideMenu addViewController:f withTitle:@"First" andImage:starMenuImage];
     self.window.rootViewController = slideMenu;
     
     [self.window makeKeyAndVisible];
