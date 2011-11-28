@@ -9,7 +9,10 @@ All children added to JWSlideMenuController get set as rootviewControllers in a 
 
 What is not working
 ===============
-Does not yet support displaying the images for the menu items.
+These items are being worked on next:
+*Does not yet support displaying the images for the menu items.
+*Does not build to a library yet.
+
 
 Use Example
 ==========
