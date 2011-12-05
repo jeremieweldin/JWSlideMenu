@@ -90,6 +90,8 @@
     [self.navigationBar pushNavigationItem:controller.navigationItem animated:YES];
     controller.navigationController = self;
     
+    controller.view.frame = self.contentView.bounds;
+    
     if([self.childViewControllers count] == 1)
     {
         [self.contentView addSubview:controller.view];
@@ -108,6 +110,7 @@
     if([self.childViewControllers count] > 1)
     {
         previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
+        previousController.view.frame = self.contentView.bounds;
     }
     
     [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
