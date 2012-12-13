@@ -74,7 +74,7 @@
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
 {
-    [self popViewController];
+//    [self popViewController]; //This leads to recursive poping 
 }
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item
@@ -115,6 +115,10 @@
     
     [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
     [controller removeFromParentViewController];
+   
+    if(self.navigationBar.topItem==controller.navigationItem)
+        [self.navigationBar popNavigationItemAnimated:YES];
+   
     return controller;
 }
 
