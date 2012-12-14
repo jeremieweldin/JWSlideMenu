@@ -9,6 +9,12 @@
 #import "JWNavigationController.h"
 #import "JWSlideMenuViewController.h"
 
+@interface JWNavigationController(Private)
+
+-(UIViewController*)removeTopViewController;
+
+@end
+
 @implementation JWNavigationController
 
 @synthesize navigationBar;
@@ -74,7 +80,12 @@
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item
 {
-//    [self popViewController]; //This leads to recursive poping 
+    UIViewController *controller = [self.childViewControllers lastObject];
+    
+    if (item==controller.navigationItem)
+    {
+        [self removeTopViewController];
+    }
 }
 
 - (void)navigationBar:(UINavigationBar *)navigationBar didPushItem:(UINavigationItem *)item
@@ -98,7 +109,7 @@
     }
     else
     {
-        UIViewController *previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
+        UIViewController *previousController = [self.childViewControllers   objectAtIndex:[self.childViewControllers count]-2];
         [self transitionFromViewController:previousController toViewController:controller duration:0.5 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
      }
 }
@@ -116,7 +127,7 @@
     [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
     [controller removeFromParentViewController];
    
-    if(self.navigationBar.topItem==controller.navigationItem)
+    if(self.navigationBar.items.count > self.childViewControllers.count)
         [self.navigationBar popNavigationItemAnimated:YES];
    
     return controller;
@@ -143,6 +154,26 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return YES;
+}
+
+-(UIViewController*)removeTopViewController
+{
+    UIViewController *controller = [self.childViewControllers lastObject];
+    
+    UIViewController *previousController = nil;
+    if([self.childViewControllers count] > 1)
+    {
+        previousController = [self.childViewControllers objectAtIndex:[self.childViewControllers count]-2];
+        previousController.view.frame = self.contentView.bounds;
+        
+        
+    }
+    
+    
+    [self transitionFromViewController:controller toViewController:previousController duration:0.3 options:UIViewAnimationOptionTransitionNone animations:NULL completion:NULL];
+    [controller removeFromParentViewController];
+    
+    return controller;
 }
 
 @end
