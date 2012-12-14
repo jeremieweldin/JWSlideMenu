@@ -82,7 +82,7 @@
 {
     UIViewController *controller = [self.childViewControllers lastObject];
     
-    if (item==controller.navigationItem)
+    if (item==controller.navigationItem) //Will now called only if a back button pop happens, not in manual pops
     {
         [self removeTopViewController];
     }
@@ -116,6 +116,7 @@
 
 - (UIViewController *)popViewController
 {
+    //Can use this to pop manually rather than back button alone
     UIViewController *controller = [self.childViewControllers lastObject];
     UIViewController *previousController = nil;
     if([self.childViewControllers count] > 1)
